@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TopContainerComponent } from './components/top-container/top-container.component';
+import { ContainerHeadingComponent } from './components/container-heading/container-heading.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    TopContainerComponent
+    TopContainerComponent,
+    ContainerHeadingComponent
   ],
   imports: [
     BrowserModule,

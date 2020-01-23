@@ -1,0 +1,8 @@
+.top-container{
+    height: 500px;
+    background: #2d0456;
+    padding-top: 50px;
+}
+.top-container-content{
+    padding: 0 20px;
+}

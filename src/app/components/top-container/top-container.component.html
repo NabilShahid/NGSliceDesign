@@ -1,1 +1,11 @@
-<p>top-container works!</p>
+<div class="top-container">
+  <app-nav-bar
+    (navIndexChange)="updateSelectedHeadingText($event)"
+  ></app-nav-bar>
+  <div class="vertical-space"></div>
+  <div class="top-container-content">
+    <app-container-heading
+      [headingText]="selectedHeadingText"
+    ></app-container-heading>
+  </div>
+</div>
