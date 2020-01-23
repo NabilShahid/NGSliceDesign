@@ -1,16 +1,16 @@
 import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { NavOneTestCompComponent } from "./components/nav-one-test-comp/nav-one-test-comp.component";
+import { NavOneMainComponent } from './components/nav-one-main/nav-one-main.component';
 
 @NgModule({
-  declarations: [NavOneTestCompComponent],
+  declarations: [NavOneMainComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: NavOneTestCompComponent
+        component: NavOneMainComponent
       }
     ])
   ]
