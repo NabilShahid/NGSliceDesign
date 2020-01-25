@@ -7,15 +7,17 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 import { TopContainerComponent } from "./components/top-container/top-container.component";
- import { AdminPanelComponent } from "./components/admin-panel/admin-panel.component";
+import { AdminPanelComponent } from "./components/admin-panel/admin-panel.component";
 import { NotAuthorizedComponent } from "./components/not-authorized/not-authorized.component";
+import { CurrencyDirective } from './directives/currency.directive';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     TopContainerComponent,
-     AdminPanelComponent,
-    NotAuthorizedComponent
+    AdminPanelComponent,
+    NotAuthorizedComponent,
+    CurrencyDirective
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
