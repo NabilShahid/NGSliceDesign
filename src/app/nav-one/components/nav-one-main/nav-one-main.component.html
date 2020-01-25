@@ -1,16 +1,27 @@
-<div class="row">
-  <div class="col-md-8">
-    Barclaycard CashForward World MasterClass
+<div class="main-route-item">
+  <div class="row">
+    <div class="col-md-8">
+      Barclaycard CashForward World MasterClass
+    </div>
+    <div class="col-md-4 right-align">
+      <rating
+        [(ngModel)]="rate"
+        [max]="5"
+        [titles]="['one', 'two', 'three']"
+      ></rating>
+    </div>
   </div>
-  <div class="col-md-4 right-align">
-    Rating Component
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-    Hello
-  </div>
-  <div class="col-md-10">
-    <app-ul-list [list]="cardBenefitsList"> </app-ul-list>
+  <div class="row top-margin">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="assets/images/bankcard.jpg" alt="Card Image" class="full-width"  />
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <app-ul-list [list]="cardBenefitsList"> </app-ul-list>
+    </div>
   </div>
 </div>

@@ -3,12 +3,17 @@ import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { NavOneMainComponent } from './components/nav-one-main/nav-one-main.component';
+import { RatingModule } from 'ngx-bootstrap/rating';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [NavOneMainComponent],
   imports: [
     CommonModule,
     SharedModule,
+    RatingModule,
+    FormsModule,
     RouterModule.forChild([
       {
         path: '',

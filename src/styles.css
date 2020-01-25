@@ -8,3 +8,20 @@ body{
 .right-align{
     text-align: right;
 }
+.top-margin{
+    margin-top: 15px;
+}
+.full-width{
+    width: 100%;
+}
+.top-container-heading{
+    color: white;
+    font-size: 30px;
+}
+.main-route-container .main-route-item{
+    background-color: white;
+    min-height: 150px;
+    margin: 35px 45px;
+    border-radius: 1px;
+    padding: 30px 60px;
+}
