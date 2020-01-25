@@ -1,6 +1,8 @@
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AuthGuardService } from './services/auth-guard.service';
 //index in params device route navigation index of page for identifying animation directions
 const routes: Routes = [
   {
@@ -23,7 +25,12 @@ const routes: Routes = [
   },
   {
     path: "admin-panel",
-    component:AdminPanelComponent
+    component:AdminPanelComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: "not-authorized",
+    component:NotAuthorizedComponent
   },
   { path: "**", redirectTo: "/navone", pathMatch: "full" }
 ];

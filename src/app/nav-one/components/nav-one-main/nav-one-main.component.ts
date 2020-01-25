@@ -1,3 +1,4 @@
+import { CARD_BENEFITS } from './../../../constants/common-consts';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavOneMainComponent implements OnInit {
 
   constructor() { }
-
+  cardBenefitsList=CARD_BENEFITS;
   ngOnInit() {
   }
 
