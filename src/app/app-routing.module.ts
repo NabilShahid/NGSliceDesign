@@ -4,18 +4,19 @@ import { Routes, RouterModule } from "@angular/router";
 const routes: Routes = [
   {
     path: "navone",
-    data: {animation: 'NavOnePage'},
+    data: {index: 1},
     loadChildren: () =>
       import("./nav-one/nav-one.module").then(mod => mod.NavOneModule)
   },
   {
     path: "navtwo",
-    data: {animation: 'NavTwoPage'},
+    data: {index: 2},
     loadChildren: () =>
       import("./nav-two/nav-two.module").then(mod => mod.NavTwoModule)
   },
   {
     path: "navthree",
+    data:{index:3},
     loadChildren: () =>
       import("./nav-three/nav-three.module").then(mod => mod.NavThreeModule)
   },
