@@ -1,3 +1,4 @@
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 //index in params device route navigation index of page for identifying animation directions
@@ -19,6 +20,10 @@ const routes: Routes = [
     data: { index: 3 },
     loadChildren: () =>
       import("./nav-three/nav-three.module").then(mod => mod.NavThreeModule)
+  },
+  {
+    path: "admin-panel",
+    component:AdminPanelComponent
   },
   { path: "**", redirectTo: "/navone", pathMatch: "full" }
 ];

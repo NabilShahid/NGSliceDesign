@@ -8,12 +8,16 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TopContainerComponent } from './components/top-container/top-container.component';
 import { ContainerHeadingComponent } from './components/container-heading/container-heading.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     TopContainerComponent,
-    ContainerHeadingComponent
+    ContainerHeadingComponent,
+    AdminPanelComponent,
+    NotAuthorizedComponent
   ],
   imports: [
     BrowserModule,
