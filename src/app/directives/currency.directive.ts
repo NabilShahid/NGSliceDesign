@@ -1,3 +1,4 @@
+import { TransformService } from "./../services/transform.service";
 import { Directive, ElementRef, HostListener } from "@angular/core";
 
 @Directive({
@@ -5,17 +6,18 @@ import { Directive, ElementRef, HostListener } from "@angular/core";
 })
 export class CurrencyDirective {
   private el;
-  constructor(private elemRef: ElementRef) {
-    this.el = this.elemRef.nativeElement;
+  constructor(
+    private elementRef: ElementRef,
+    private transformService: TransformService
+  ) {
+    this.el = this.elementRef.nativeElement;
     this.el.style.textAlign = "right";
   }
   ngOnInit() {
     this.el.value = "$0";
   }
   @HostListener("input", ["$event.target.value"])
-  onBlur(value) {
-    this.el.value = this.currentFormat(value);
+  onInput(value) {
+    this.el.value = this.transformService.currencyTransform(value);
   }
-  currentFormat = num =>
-    "$" + num.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
