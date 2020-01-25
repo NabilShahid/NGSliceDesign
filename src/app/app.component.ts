@@ -11,6 +11,10 @@ import { slideInAnimation } from "./constants/animations";
 export class AppComponent {
   title = "slicing-test-nabil";
   prevPageIndex = 0;
+  /**
+   * Get outlet data index params, set direction param and return anim state with params
+   * @param outlet router outlet object
+   */
   prepareRoute(outlet: RouterOutlet) {
     const newPageIndex =
       outlet && outlet.activatedRouteData && outlet.activatedRouteData["index"];

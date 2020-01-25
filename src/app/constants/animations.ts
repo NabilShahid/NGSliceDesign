@@ -38,10 +38,10 @@ export const slideInAnimation = trigger("routeAnimations", [
     query(":enter", [style({ left: "{{start}}%" })], { optional: true }),
     // query(":leave", animateChild(), { optional: true }),
     group([
-      query(":leave", [animate("1s ease-out", style({ left: "{{end}}%" }))], {
+      query(":leave", [animate("0.4s ease-in-out", style({ left: "{{end}}%" }))], {
         optional: true
       }),
-      query(":enter", [animate("1s ease-out", style({ left: "0%" }))], {
+      query(":enter", [animate("0.4s ease-in-out", style({ left: "0%" }))], {
         optional: true
       })
     ]),

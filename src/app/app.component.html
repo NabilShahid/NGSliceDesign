@@ -1,4 +1,9 @@
 <app-top-container></app-top-container>
-<div [@routeAnimations]="prepareRoute(outlet)" >
-    <router-outlet #outlet="outlet"></router-outlet>
+<div class="main-route-container">
+  <div [@routeAnimations]="prepareRoute(outlet)">
+    
+
+      <router-outlet #outlet="outlet"></router-outlet>
+     
   </div>
+</div>
