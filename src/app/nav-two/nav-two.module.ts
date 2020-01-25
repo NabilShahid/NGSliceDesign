@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { NavTwoTestCompComponent } from "./components/nav-two-test-comp/nav-two-test-comp.component";
@@ -17,6 +18,7 @@ import { RegisterConfirmationComponent } from "./components/register-confirmatio
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: "",
