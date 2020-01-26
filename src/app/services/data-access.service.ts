@@ -18,7 +18,10 @@ export class DataAccessService {
     return this.currentData;
   }
 
-  getRegistrationData() {
+  async getRegistrationData():Promise<Array<{
+    [key: string]: string | number;
+  }>> {
+    await this.fakeWait();
     return this.registrationData;
   }
 
@@ -31,7 +34,8 @@ export class DataAccessService {
     this.hasCurrentData = true;
   }
 
-  submitData() {
+  async submitData() {
+    await this.fakeWait();
     this.registrationData.push(this.currentData);
     this.hasCurrentData = false;
   }
@@ -42,10 +46,18 @@ export class DataAccessService {
 
   deleteRecent() {
     this.registrationData.splice(this.registrationData.length - 1, 1);
-    this.registrationData=JSON.parse(JSON.stringify(this.registrationData));
+    this.registrationData = JSON.parse(JSON.stringify(this.registrationData));
   }
   deleteAll() {
     this.registrationData = [];
+  }
+
+  async fakeWait() {
+    await new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 2000);
+    });
   }
 
   constructor() {}

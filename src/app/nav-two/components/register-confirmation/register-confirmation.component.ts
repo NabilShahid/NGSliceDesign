@@ -12,6 +12,7 @@ export class RegisterConfirmationComponent implements OnInit {
   currentData: {
     [key: string]: string | number;
   };
+  loading=false;
   constructor(
     private dataAccessService: DataAccessService,
     private transformService: TransformService,
@@ -23,12 +24,14 @@ export class RegisterConfirmationComponent implements OnInit {
       this.currentData = this.dataAccessService.getCurrentData();
     else this.rtr.navigate(["navone"]);
   }
-  saveData() {
+  async saveData() {
+    this.loading=true;
     this.dataAccessService.updateDataValue(
       "Amount",
       this.transformService.currencyToNumber(this.currentData.Amount as string)
     );
-    this.dataAccessService.submitData();
+    await this.dataAccessService.submitData();
+    this.loading=false;
     this.rtr.navigate(["navthree"]);
   }
 }

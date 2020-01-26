@@ -1,33 +1,39 @@
 Please confirm your details
-<div class="row">
-  <div class="col-md-3">
-    Name:
+<app-loading [loading]="loading">
+  <div class="row">
+    <div class="col-md-3">
+      Name:
+    </div>
+    <div class="col-md-9">
+      {{ currentData.Name }}
+    </div>
   </div>
-  <div class="col-md-9">
-    {{currentData.Name}}
+  <div class="row">
+    <div class="col-md-3">
+      Email:
+    </div>
+    <div class="col-md-9">
+      {{ currentData.Email }}
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-3">
-    Email:
+  <div class="row">
+    <div class="col-md-3">
+      Min Amount:
+    </div>
+    <div class="col-md-9">
+      {{ currentData.Amount }}
+    </div>
   </div>
-  <div class="col-md-9">
-    {{currentData.Email}}
+  <div class="full-width right-align top-margin">
+    <button
+      routerLink="navtwo/register"
+      class="btn action-button"
+      style="margin-right: 5px;"
+    >
+      Cancel
+    </button>
+    <button (click)="saveData()" class="btn action-button">
+      Submit
+    </button>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-3">
-    Min Amount:
-  </div>
-  <div class="col-md-9">
-    {{currentData.Amount}}
-  </div>
-</div>
-<div class="full-width right-align top-margin">
-  <button routerLink="navtwo/register" class="btn action-button" style="margin-right: 5px;">
-    Cancel
-  </button>
-  <button (click)="saveData()" class="btn action-button">
-    Submit
-  </button>
-</div>
+</app-loading>

@@ -9,32 +9,38 @@ import { Component, OnInit } from "@angular/core";
 })
 export class NavThreeMainComponent implements OnInit {
   constructor(private dataAccessService: DataAccessService) {}
-
+  loading = true;
   currentData: Array<{
     [key: string]: string | number;
-  }>;
+  }>=[];
   tableCols: Array<TableCol> = [
-    { Label: "Name", GridSize: 3, DataKey: "Name",Align:"left" },
-    { Label: "Email", GridSize: 3, DataKey: "Email",Align:"left" },
+    { Label: "Name", GridSize: 3, DataKey: "Name", Align: "left" },
+    { Label: "Email", GridSize: 3, DataKey: "Email", Align: "left" },
     {
       Label: "Amount",
       GridSize: 3,
       DataKey: "Amount",
       Footer: "sum",
       FooterLabel: "Total",
-      Align:"right"
+      Align: "right"
     }
   ];
 
-  ngOnInit() {
-    this.currentData = this.dataAccessService.getRegistrationData();
+  async ngOnInit() {
+    this.loading = true;
+    this.currentData = await this.dataAccessService.getRegistrationData();
+    this.loading = false;
   }
-  deleteRecent() {
+  async deleteRecent() {
     this.dataAccessService.deleteRecent();
-    this.currentData = this.dataAccessService.getRegistrationData();
+    this.loading=true;
+    this.currentData = await this.dataAccessService.getRegistrationData();
+    this.loading=false;
   }
-  deleteAll() {
+  async deleteAll() {
     this.dataAccessService.deleteAll();
-    this.currentData = this.dataAccessService.getRegistrationData();
+    this.loading=true;
+    this.currentData = await this.dataAccessService.getRegistrationData();
+    this.loading=false;
   }
 }

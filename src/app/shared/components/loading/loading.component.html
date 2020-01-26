@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <img *ngIf="loading" src="assets/gifs/loading.gif" />
+  <img [hidden]="!loading" src="assets/gifs/loading.gif" />
   <div [style.opacity]="loading ? 0.7 : 1">
     <ng-content></ng-content>
   </div>
