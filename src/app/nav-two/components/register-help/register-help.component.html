@@ -10,7 +10,7 @@
       *ngIf="rtr.url === '/navtwo/register'"
       routerLink="navtwo/register-instructions"
       (click)="rtr.navigate(['navtwo','register-instructions'])"
-      class="btn"
+      class="btn action-button"
     >
       Instructions
     </button>
@@ -18,7 +18,7 @@
       <button
         *ngIf="rtr.url === '/navtwo/register-instructions'"
         routerLink="navtwo/register"
-        class="btn"
+        class="btn action-button"
       >
         Registration
       </button>

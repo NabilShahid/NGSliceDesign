@@ -26,6 +26,12 @@ body {
   color: red;
   font-size: 12px;
 }
+.action-button{
+  border-radius: 20px;
+  background: #00c4ff;
+  color: white;
+  font-weight: 500;
+}
 .main-route-container .main-route-item {
   background-color: white;
   min-height: 150px;

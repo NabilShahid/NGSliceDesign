@@ -10,7 +10,10 @@
         (input)="validateName($event)"
         class="form-control"
       />
-      <span *ngIf="formTouched&&!formFields['Name'].Valid" class="invalid-field-text">
+      <span
+        *ngIf="formTouched && !formFields['Name'].Valid"
+        class="invalid-field-text"
+      >
         {{ formFields["Name"].InvalidText }}
       </span>
     </div>
@@ -27,7 +30,10 @@
         (input)="validateEmail($event)"
         class="form-control"
       />
-      <span *ngIf="formTouched&&!formFields['Email'].Valid" class="invalid-field-text">
+      <span
+        *ngIf="formTouched && !formFields['Email'].Valid"
+        class="invalid-field-text"
+      >
         {{ formFields["Email"].InvalidText }}
       </span>
     </div>
@@ -40,12 +46,16 @@
       <input
         type="password"
         name="Password"
+        maxlength="8"
         autocomplete="no"
         id="ddd"
         (input)="validatePassword($event)"
         class="form-control"
       />
-      <span *ngIf="formTouched&&!formFields['Password'].Valid" class="invalid-field-text">
+      <span
+        *ngIf="formTouched && !formFields['Password'].Valid"
+        class="invalid-field-text"
+      >
         {{ formFields["Password"].InvalidText }}
       </span>
     </div>
@@ -62,12 +72,17 @@
         (input)="validateAmount($event)"
         class="form-control"
       />
-      <span *ngIf="formTouched&&!formFields['Amount'].Valid" class="invalid-field-text">
+      <span
+        *ngIf="formTouched && !formFields['Amount'].Valid"
+        class="invalid-field-text"
+      >
         {{ formFields["Amount"].InvalidText }}
       </span>
     </div>
   </div>
-  <button (click)="goToConfirmation()" class="btn">
-    Countinue
-  </button>
+  <div class="full-width right-align top-margin">
+    <button (click)="goToConfirmation()" class="btn action-button">
+      Countinue
+    </button>
+  </div>
 </div>
