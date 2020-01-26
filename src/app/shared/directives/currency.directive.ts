@@ -1,4 +1,4 @@
-import { TransformService } from "./../services/transform.service";
+import { TransformService } from "../../services/transform.service";
 import { Directive, ElementRef, HostListener } from "@angular/core";
 
 @Directive({

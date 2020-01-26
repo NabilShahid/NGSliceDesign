@@ -4,7 +4,15 @@
       <label class="form-label">Name: </label>
     </div>
     <div class="col-md-9 form-input">
-      <input class="form-control" />
+      <input
+        type="text"
+        name="Name"
+        (input)="validateName($event)"
+        class="form-control"
+      />
+      <span *ngIf="formTouched&&!formFields['Name'].Valid" class="invalid-field-text">
+        {{ formFields["Name"].InvalidText }}
+      </span>
     </div>
   </div>
   <div class="row form-field">
@@ -12,7 +20,34 @@
       <label class="form-label">Email: </label>
     </div>
     <div class="col-md-9 form-input">
-      <input class="form-control" />
+      <input
+        type="email"
+        name="Email"
+        autocomplete="no"
+        (input)="validateEmail($event)"
+        class="form-control"
+      />
+      <span *ngIf="formTouched&&!formFields['Email'].Valid" class="invalid-field-text">
+        {{ formFields["Email"].InvalidText }}
+      </span>
+    </div>
+  </div>
+  <div class="row form-field">
+    <div class="col-md-3 form-label">
+      <label class="form-label">Password: </label>
+    </div>
+    <div class="col-md-9 form-input">
+      <input
+        type="password"
+        name="Password"
+        autocomplete="no"
+        id="ddd"
+        (input)="validatePassword($event)"
+        class="form-control"
+      />
+      <span *ngIf="formTouched&&!formFields['Password'].Valid" class="invalid-field-text">
+        {{ formFields["Password"].InvalidText }}
+      </span>
     </div>
   </div>
   <div class="row form-field">
@@ -20,7 +55,19 @@
       <label class="form-label">Min Amount: </label>
     </div>
     <div class="col-md-9 form-input">
-      <input appCurreny class="form-control" />
+      <input
+        appCurreny
+        type="text"
+        name="Amount"
+        (input)="validateAmount($event)"
+        class="form-control"
+      />
+      <span *ngIf="formTouched&&!formFields['Amount'].Valid" class="invalid-field-text">
+        {{ formFields["Amount"].InvalidText }}
+      </span>
     </div>
   </div>
+  <button (click)="goToConfirmation()" class="btn">
+    Countinue
+  </button>
 </div>

@@ -1,5 +1,5 @@
-import { CurrencyDirective } from './../directives/currency.directive';
- import { UlListComponent } from '../shared/ul-list/ul-list.component';
+import { CurrencyDirective } from './directives/currency.directive';
+ import { UlListComponent } from './components/ul-list/ul-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
