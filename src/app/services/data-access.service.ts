@@ -40,5 +40,12 @@ export class DataAccessService {
     return this.hasCurrentData;
   }
 
+  deleteRecent() {
+    this.registrationData.splice(this.registrationData.length - 1, 1);
+  }
+  deleteAll() {
+    this.registrationData = [];
+  }
+
   constructor() {}
 }

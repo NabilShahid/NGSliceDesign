@@ -1,4 +1,4 @@
-import { DataAccessService } from './../../../services/data-access.service';
+import { DataAccessService } from "./../../../services/data-access.service";
 import { TableCol } from "./../../../types/types";
 import { Component, OnInit } from "@angular/core";
 
@@ -8,7 +8,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./nav-three-main.component.css"]
 })
 export class NavThreeMainComponent implements OnInit {
-  constructor(private dataAccessService:DataAccessService) {}
+  constructor(private dataAccessService: DataAccessService) {}
 
   currentData: Array<{
     [key: string]: string | number;
@@ -20,6 +20,14 @@ export class NavThreeMainComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.currentData=this.dataAccessService.getRegistrationData();
+    this.currentData = this.dataAccessService.getRegistrationData();
+  }
+  deleteRecent() {
+    this.dataAccessService.deleteRecent();
+    this.currentData = this.dataAccessService.getRegistrationData();
+  }
+  deleteAll() {
+    this.dataAccessService.deleteAll();
+    this.currentData = this.dataAccessService.getRegistrationData();
   }
 }
