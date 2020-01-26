@@ -22,8 +22,7 @@ export class DataListComponent implements OnInit {
         prev[curr.DataKey] = this.data.reduce((p, c) => {
           return p+c[curr.DataKey];
         },0);
-        if(!prev[curr.DataKey])prev[curr.DataKey]=0;
-      }
+       }
       return prev;
     }, {});
   }
