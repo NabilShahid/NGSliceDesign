@@ -45,6 +45,9 @@ body {
 .full-width {
   width: 100%;
 }
+.position-relative{
+  position: relative;
+}
 .top-container-heading {
   color: white;
   font-size: 30px;

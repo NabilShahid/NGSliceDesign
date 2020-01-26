@@ -13,7 +13,7 @@
       Delete All
     </button>
   </div>
-  <app-data-list [data]="currentData" [cols]="tableCols">
-
-  </app-data-list>
+  <app-loading [loading]="true">
+    <app-data-list [data]="currentData" [cols]="tableCols"></app-data-list>
+  </app-loading>
 </div>

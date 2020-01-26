@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavThreeMainComponent } from './components/nav-three-main/nav-three-main.component';
@@ -10,6 +11,7 @@ import { DataListComponent } from './components/data-list/data-list.component';
   declarations: [NavThreeMainComponent, DataListComponent],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: '',
