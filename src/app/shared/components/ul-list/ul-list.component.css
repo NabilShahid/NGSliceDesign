@@ -4,3 +4,7 @@ li{
 li:not(:first-child){
     margin-top: 12px;
 }
+.show-toggle{
+    color: #1796f5;
+    cursor: pointer;
+}

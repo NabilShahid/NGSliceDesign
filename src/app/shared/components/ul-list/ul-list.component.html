@@ -1,5 +1,22 @@
 <ul>
-    <li *ngFor="let item of list">
-        {{item}}
-    </li>
+  <li *ngFor="let item of list; let i = index">
+    {{ item.Shown }}
+    <span *ngIf="item.Hidden && shownMoreItems[i]">
+      {{ item.Hidden }}
+    </span>
+    <span
+      (click)="shownMoreItems[i] = true"
+      *ngIf="item.Hidden && !shownMoreItems[i]"
+      class="show-toggle"
+    >
+      ...show more
+    </span>
+    <span
+      (click)="shownMoreItems[i] = false"
+      *ngIf="item.Hidden && shownMoreItems[i]"
+      class="show-toggle"
+    >
+      show less
+    </span>
+  </li>
 </ul>

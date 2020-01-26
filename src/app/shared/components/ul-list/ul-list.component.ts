@@ -7,9 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UlListComponent implements OnInit {
 
+  shownMoreItems=[];
   @Input() list=[];
   constructor() { }
-
   ngOnInit() {
   }
 

@@ -5,15 +5,29 @@ export const CONTAINER_TEXTS = [
 ];
 
 export const CARD_BENEFITS = [
-  "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening.",
-  "Earn unlimited 1.5% cash rewards on every purcahse.",
-  "Earn unlimited 1.5% cash rewards on every"
+  {
+    Shown:
+      "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening."
+  },
+  { Shown: "Earn unlimited 1.5% cash rewards on every purcahse." },
+  {
+    Shown: "Earn unlimited 1.5% cash rewards on every",
+    Hidden:
+      "item and get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening."
+  }
 ];
 
 export const REGISTER_INSTRUCTION = [
-  "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening.",
-  "Earn unlimited 1.5% cash rewards on every purcahse.",
-  "Earn unlimited 1.5% cash rewards on every"
+  {
+    Shown:
+      "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening."
+  },
+  { Shown: "Earn unlimited 1.5% cash rewards on every purcahse." },
+  {
+    Shown: "Earn unlimited 1.5% cash rewards on every",
+    Hidden:
+      "item and get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening."
+  }
 ];
 
 export const INITIAL_REGISTRATION_DATA = [
