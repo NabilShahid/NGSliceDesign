@@ -1,24 +1,17 @@
+<div class="main-route-item-header">
+  Credit Opportunities With Good Approval Odds <sup>t</sup>
+</div>
 <div class="main-route-item">
-  <div class="row">
-    <div class="col-xs-12 col-12">
-      <div class="content-wrapper">
-        <div class="header-row">
-          <div class="col-sm-3">
-            Name
-          </div>
-          <div class="col-sm-5">
-            Email
-          </div>
-          <div class="col-sm-4">
-            Min Amount
-          </div>
-        </div>
-      </div>
-      <!-- <pagination
-        [totalItems]="contentArray.length"
-        (pageChanged)="pageChanged($event)"
-      ></pagination> -->
-    </div>
+  <div class="full-width data-action-panel">
+    <button routerLink="/navtwo/register" class="btn action-button right-margin-slight">
+      Add New Item
+    </button>
+    <button class="btn action-button right-margin-slight">
+      Delete Recent
+    </button>
+    <button class="btn action-button right-margin-slight">
+      Delete All
+    </button>
   </div>
-  <div></div>
+  <app-data-list [data]="currentData" [cols]="tableCols"> </app-data-list>
 </div>

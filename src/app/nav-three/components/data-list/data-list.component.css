@@ -1,0 +1,15 @@
+.data-list-header {
+  background: #22123a;
+  color: white;
+  padding: 5px 0;
+  font-size: 17px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  box-shadow: var(--material-shadow);
+}
+.data-list-row {
+  padding: 6px 0;
+  margin-top: 4px;
+  box-shadow: var(--material-shadow);
+  border-radius: 4px;
+}

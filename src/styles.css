@@ -39,6 +39,9 @@ body {
 .top-margin-slight {
   margin-top: 10px;
 }
+.right-margin-slight{
+  margin-right: 10px;
+}
 .full-width {
   width: 100%;
 }

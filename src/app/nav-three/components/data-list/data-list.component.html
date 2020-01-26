@@ -1,0 +1,10 @@
+<div class="row data-list-header">
+  <div *ngFor="let col of cols" class="col-sm-{{ col.GridSize }}">
+    {{ col.Label }}
+  </div>
+</div>
+<div *ngFor="let item of data" class="row data-list-row">
+  <div *ngFor="let col of cols" class="col-sm-{{ col.GridSize }}">
+    {{ item[col.DataKey] }}
+  </div>
+</div>

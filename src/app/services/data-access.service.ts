@@ -1,3 +1,4 @@
+import { INITIAL_REGISTRATION_DATA } from "./../constants/common-consts";
 import { Injectable } from "@angular/core";
 
 @Injectable({
@@ -11,10 +12,14 @@ export class DataAccessService {
 
   private registrationData: Array<{
     [key: string]: string | number;
-  }> = [];
+  }> = INITIAL_REGISTRATION_DATA;
 
   getCurrentData() {
     return this.currentData;
+  }
+
+  getRegistrationData() {
+    return this.registrationData;
   }
 
   updateDataValue(key, value) {
