@@ -42,6 +42,7 @@ export class DataAccessService {
 
   deleteRecent() {
     this.registrationData.splice(this.registrationData.length - 1, 1);
+    this.registrationData=JSON.parse(JSON.stringify(this.registrationData));
   }
   deleteAll() {
     this.registrationData = [];

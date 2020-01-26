@@ -1,10 +1,29 @@
 <div class="row data-list-header">
-  <div *ngFor="let col of cols" class="col-sm-{{ col.GridSize }}">
+  <div
+    *ngFor="let col of cols"
+    class="col-sm-{{ col.GridSize }}"
+    [style.textAlign]="col.Align"
+  >
     {{ col.Label }}
   </div>
 </div>
 <div *ngFor="let item of data" class="row data-list-row">
-  <div *ngFor="let col of cols" class="col-sm-{{ col.GridSize }}">
+  <div
+    *ngFor="let col of cols"
+    class="col-sm-{{ col.GridSize }}"
+    [style.textAlign]="col.Align"
+  >
     {{ item[col.DataKey] }}
+  </div>
+</div>
+<div class="row data-list-footer">
+  <div
+    *ngFor="let col of cols"
+    class="col-sm-{{ col.GridSize }}"
+    [style.textAlign]="col.Align"
+  >
+    <span *ngIf="footerValues[col.DataKey]"
+      >{{ col.FooterLabel }}: {{ footerValues[col.DataKey] }}</span
+    >
   </div>
 </div>

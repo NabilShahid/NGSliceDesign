@@ -14,9 +14,16 @@ export class NavThreeMainComponent implements OnInit {
     [key: string]: string | number;
   }>;
   tableCols: Array<TableCol> = [
-    { Label: "Name", GridSize: 3, DataKey: "Name" },
-    { Label: "Email", GridSize: 3, DataKey: "Email" },
-    { Label: "Amount", GridSize: 3, DataKey: "Amount" }
+    { Label: "Name", GridSize: 3, DataKey: "Name",Align:"left" },
+    { Label: "Email", GridSize: 3, DataKey: "Email",Align:"left" },
+    {
+      Label: "Amount",
+      GridSize: 3,
+      DataKey: "Amount",
+      Footer: "sum",
+      FooterLabel: "Total",
+      Align:"right"
+    }
   ];
 
   ngOnInit() {

@@ -6,5 +6,8 @@ export interface FormField {
 export interface TableCol{
     Label:string,
     GridSize:number,
-    DataKey:string
+    DataKey:string,
+    Align:string,
+    Footer?:string,
+    FooterLabel?:string
 }

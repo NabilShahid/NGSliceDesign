@@ -13,3 +13,6 @@
   box-shadow: var(--material-shadow);
   border-radius: 4px;
 }
+.data-list-footer{
+  margin-top: 20px;
+ }
