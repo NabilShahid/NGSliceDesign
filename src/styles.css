@@ -22,6 +22,7 @@
 body {
   background-color: #f1f5f9;
   font-family: 'ProximaNova';
+  overflow-x: hidden;
 }
 .vertical-space {
   height: 20px;
@@ -83,4 +84,7 @@ sup {
 .bs-rating-star{
   color: #58d9d1;
   font-size: 18px;
+}
+.hidden-overflow{
+  overflow: hidden;
 }

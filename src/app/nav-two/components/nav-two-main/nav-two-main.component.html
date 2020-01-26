@@ -1,7 +1,12 @@
+<div class="main-route-item-header">
+  Credit Opportunities With Good Approval Odds <sup>t</sup>
+</div>
 <div class="main-route-item">
   <div class="row">
-    <div class="col-md-7">
-      <router-outlet></router-outlet>
+    <div class="col-md-7 hidden-overflow">
+      <div [@routeAnimations]="prepareRoute(outlet)" class="anim-container">
+        <router-outlet #outlet="outlet"></router-outlet>
+      </div>
     </div>
     <div class="col-md-5">
       <app-register-help></app-register-help>

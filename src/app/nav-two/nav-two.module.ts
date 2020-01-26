@@ -26,9 +26,9 @@ import { RegisterInstructionsComponent } from './components/register-instruction
         path: "",
         component: NavTwoMainComponent,
         children: [
-          { path: "register", component: RegisterFormComponent },
-          { path: "register-instructions", component: RegisterInstructionsComponent },
-          { path: "register-confirm", component: RegisterConfirmationComponent },
+          { path: "register", data:{index:1}, component: RegisterFormComponent },
+          { path: "register-instructions", data:{index:2}, component: RegisterInstructionsComponent },
+          { path: "register-confirm", data:{index:3}, component: RegisterConfirmationComponent },
           { path: "**", redirectTo: "register", pathMatch: "full" }
         ]
       }
