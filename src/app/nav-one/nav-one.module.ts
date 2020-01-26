@@ -5,7 +5,7 @@ import { CommonModule } from "@angular/common";
 import { NavOneMainComponent } from './components/nav-one-main/nav-one-main.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { FormsModule } from '@angular/forms';
-
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 @NgModule({
   declarations: [NavOneMainComponent],
@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     RatingModule,
     FormsModule,
+    PaginationModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',

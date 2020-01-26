@@ -18,6 +18,6 @@ export class CurrencyDirective {
   }
   @HostListener("input", ["$event.target.value"])
   onInput(value) {
-    this.el.value = this.transformService.currencyTransform(value);
+    this.el.value = this.transformService.numberToCurrencyTransform(value);
   }
 }

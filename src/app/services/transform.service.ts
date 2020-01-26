@@ -5,11 +5,13 @@ import { Injectable } from "@angular/core";
 })
 export class TransformService {
   constructor() {}
-  addThousandSeperator = num =>
+  addThousandSeperator = (num: string) =>
     num.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-  removeNonNumChars = num => num.replace(/\D/g, "");
+  removeNonNumChars = (num: string) => num.replace(/\D/g, "");
 
-  currencyTransform = num =>
+  numberToCurrencyTransform = (num: string) =>
     "$" + this.addThousandSeperator((+this.removeNonNumChars(num)).toString());
+
+  currencyToNumber = (str: string) => +str.replace("$", "").replace(/,/g, "");
 }

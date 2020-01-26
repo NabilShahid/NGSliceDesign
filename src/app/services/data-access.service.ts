@@ -4,30 +4,34 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class DataAccessService {
-  private hasCurrentData=false;
+  private hasCurrentData = false;
   private currentData: {
-    [key: string]: string;
+    [key: string]: string | number;
   } = {};
 
   private registrationData: Array<{
-    [key: string]: string;
+    [key: string]: string | number;
   }> = [];
 
   getCurrentData() {
     return this.currentData;
   }
 
+  updateDataValue(key, value) {
+    this.currentData[key] = value;
+  }
+
   setCurrentData(data) {
     this.currentData = data;
-    this.hasCurrentData=true;
+    this.hasCurrentData = true;
   }
 
   submitData() {
     this.registrationData.push(this.currentData);
-    this.hasCurrentData=false;
+    this.hasCurrentData = false;
   }
 
-  hasData(){
+  hasData() {
     return this.hasCurrentData;
   }
 
