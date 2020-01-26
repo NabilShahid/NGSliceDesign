@@ -4,6 +4,7 @@
     0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+/* font import */
 @font-face {
   font-family: ProximaNova;
   src: url(assets/fonts/main/ProximaNova-Reg.otf) format("opentype");
@@ -19,6 +20,8 @@
   src: url('assets/fonts/main/Proxima Nova Semibold.otf') format("opentype");
   font-weight: 500;
 }
+
+/* global styles */
 body {
   background-color: #f1f5f9;
   font-family: 'ProximaNova';
@@ -93,4 +96,11 @@ sup {
 }
 .hidden-overflow{
   overflow: hidden;
+}
+.hidden-x-overflow{
+  overflow-x: hidden;
+}
+.clickable-text{
+  color: #1796f5;
+  cursor: pointer;
 }

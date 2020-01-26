@@ -1,10 +1,6 @@
-li{
-    font-weight: 500;
+li {
+  font-weight: 500;
 }
-li:not(:first-child){
-    margin-top: 12px;
-}
-.show-toggle{
-    color: #1796f5;
-    cursor: pointer;
+li:not(:first-child) {
+  margin-top: 12px;
 }

@@ -19,9 +19,16 @@ export class RegisterFormComponent implements OnInit {
   formFields: {
     [key: string]: FormField;
   } = {
-    Name: { Valid: false, InvalidText: "Value cannot be blank" },
-    Email: { Valid: false, InvalidText: "Value cannot be blank" },
-    Password: { Valid: false, InvalidText: "Value cannot be blank" },
+    Name: {
+      Valid: false,
+      InvalidText: "Value should be more than three characters"
+    },
+    Email: { Valid: false, InvalidText: "Email not valid" },
+    Password: {
+      Valid: false,
+      InvalidText:
+        "Password must contain a special character, an upper case character, a lower case character and a numeric character"
+    },
     Amount: { Valid: false, InvalidText: "Value cannot be blank" }
   };
 
@@ -44,9 +51,7 @@ export class RegisterFormComponent implements OnInit {
       this.validationService.lowerCaseCharacter(value) &&
       this.validationService.numericCharacter(value) &&
       this.validationService.upperCaseCharacter(value) &&
-      this.validationService.specialCharacter(value) &&
-      this.validationService.minLength(value, 5) &&
-      this.validationService.maxLength(value, 100);
+      this.validationService.specialCharacter(value);
   }
   validateAmount({ target: { name, value } }) {
     this.formValues[name] = value;

@@ -7,14 +7,14 @@
     <span
       (click)="shownMoreItems[i] = true"
       *ngIf="item.Hidden && !shownMoreItems[i]"
-      class="show-toggle"
+      class="clickable-text"
     >
       ...show more
     </span>
     <span
       (click)="shownMoreItems[i] = false"
       *ngIf="item.Hidden && shownMoreItems[i]"
-      class="show-toggle"
+      class="clickable-text"
     >
       show less
     </span>
