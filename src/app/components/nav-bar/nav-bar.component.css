@@ -9,3 +9,9 @@
     color: black;
     font-weight: bold;
 }
+.route-div-container{
+    flex-basis: 33%;
+}
+a{
+    cursor: pointer;
+}

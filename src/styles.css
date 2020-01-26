@@ -17,14 +17,14 @@
 }
 @font-face {
   font-family: ProximaNova;
-  src: url('assets/fonts/main/Proxima Nova Semibold.otf') format("opentype");
+  src: url("assets/fonts/main/Proxima Nova Semibold.otf") format("opentype");
   font-weight: 500;
 }
 
 /* global styles */
 body {
   background-color: #f1f5f9;
-  font-family: 'ProximaNova';
+  font-family: "ProximaNova";
   overflow-x: hidden;
 }
 .vertical-space {
@@ -42,19 +42,16 @@ body {
 .top-margin-slight {
   margin-top: 10px;
 }
-.right-margin-slight{
+.right-margin-slight {
   margin-right: 10px;
 }
 .full-width {
   width: 100%;
 }
-.position-relative{
+.position-relative {
   position: relative;
 }
-.top-container-heading {
-  color: white;
-  font-size: 30px;
-}
+
 .invalid-field-text {
   color: red;
   font-size: 12px;
@@ -90,17 +87,22 @@ sup {
   align-items: center;
   justify-content: center;
 }
-.bs-rating-star{
+.bs-rating-star {
   color: #58d9d1;
   font-size: 18px;
 }
-.hidden-overflow{
+.hidden-overflow {
   overflow: hidden;
 }
-.hidden-x-overflow{
+.hidden-x-overflow {
   overflow-x: hidden;
 }
-.clickable-text{
+.clickable-text {
   color: #1796f5;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .hide-on-small-device {
+    display: none;
+  }
 }

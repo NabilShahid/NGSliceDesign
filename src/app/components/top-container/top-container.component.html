@@ -1,12 +1,14 @@
 <div class="top-container">
   <app-nav-bar
-    (navIndexChange)="updateSelectedHeadingText($event)"
+    (navIndexChange)="updateSelectedHeadingTextWithAnimate($event)"
   ></app-nav-bar>
   <div class="vertical-space"></div>
   <div class="top-container-content">
-    <div class="top-container-heading">
+    <div
+      class="top-container-heading"
+      [ngClass]="{ 'text-changing': textChanging }"
+    >
       {{ selectedHeadingText }}
-
     </div>
   </div>
 </div>

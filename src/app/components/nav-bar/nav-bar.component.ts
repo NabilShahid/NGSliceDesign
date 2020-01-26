@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from "@angular/router";
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class NavBarComponent implements OnInit {
   constructor() {}
-  @Output() navIndexChange= new EventEmitter();
+  @Output() navIndexChange = new EventEmitter();
   readonly navLinks = [
     {
       LargeText: "Navigation Link 1",
@@ -25,5 +26,15 @@ export class NavBarComponent implements OnInit {
       RoutePath: "navthree"
     }
   ];
-  ngOnInit() {}
+  ngOnInit() {
+    this.emitCurrentRouteLinkIndex();
+  }
+  emitCurrentRouteLinkIndex() {
+    this.navIndexChange.emit(
+      this.navLinks.findIndex(
+        r => r.RoutePath === location.pathname.split("/")[1]
+      )
+    );
+    location.pathname.split("/")[1];
+  }
 }

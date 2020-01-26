@@ -1,4 +1,4 @@
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { CONTAINER_TEXTS } from "./../../constants/common-consts";
 import { Component, OnInit } from "@angular/core";
 
@@ -8,14 +8,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./top-container.component.css"]
 })
 export class TopContainerComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {
-    
-  }
+  constructor() {}
   selectedHeadingText: string;
-  updateSelectedHeadingText = index =>
-    (this.selectedHeadingText = CONTAINER_TEXTS[index]);
-  ngOnInit() {
-    this.selectedHeadingText =
-      CONTAINER_TEXTS[this.activatedRoute.root.firstChild.snapshot.data.index];
+  textChanging: boolean = false;
+  updateSelectedHeadingTextWithAnimate(index){
+    this.textChanging=true;
+    setTimeout(() => {
+      this.selectedHeadingText = CONTAINER_TEXTS[index];
+      this.textChanging=false;
+    }, 500);
+   
   }
+  ngOnInit() {}
 }

@@ -1,8 +1,18 @@
-.top-container{
-    height: 500px;
-    background: #22123a;
-    padding-top: 50px;
+.top-container {
+  height: 500px;
+  background: #22123a;
+  padding-top: 50px;
 }
-.top-container-content{
-    padding: 0 20px;
+.top-container-content {
+  padding: 0 20px;
+}
+.top-container-heading {
+  color: white;
+  font-size: 98px;
+  font-weight: bold;
+  padding-left: 30px;
+  transition: 0.7s;
+}
+.text-changing {
+  opacity: 0;
 }

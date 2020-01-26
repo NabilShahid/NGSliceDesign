@@ -1,15 +1,9 @@
 <nav class="st-navbar">
-  <!-- <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-
   <a
     *ngFor="let link of navLinks; let i = index"
     class="st-nav-link"
     (click)="navIndexChange.emit(i)"
-    [routerLink]="'/'+link.RoutePath"
-    >{{link.LargeText}}
+    [routerLink]="'/' + link.RoutePath"
+    >{{ link.LargeText }}
   </a>
 </nav>
-<!-- [routerLinkActive] -->
