@@ -1,3 +1,6 @@
 li{
     font-weight: 500;
 }
+li:not(:first-child){
+    margin-top: 12px;
+}

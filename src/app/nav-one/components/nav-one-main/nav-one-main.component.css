@@ -1,0 +1,10 @@
+.apply-button{
+    width: 100%;
+    margin-top: 25px;
+    color: white;
+    background-color: #fb6e3d;
+}
+.reviews-count{
+     font-size: 14px;
+    margin-left: 5px;
+}

@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-one-main.component.css']
 })
 export class NavOneMainComponent implements OnInit {
-
+  rating=4;
+  reviewCount=3252;
   constructor() { }
   cardBenefitsList=CARD_BENEFITS;
   ngOnInit() {

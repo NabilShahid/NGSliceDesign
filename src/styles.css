@@ -3,8 +3,25 @@
   --material-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
     0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(assets/fonts/main/ProximaNova-Reg.otf) format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url(assets/fonts/main/ProximaNova-Bold.otf) format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url('assets/fonts/main/Proxima Nova Semibold.otf') format("opentype");
+  font-weight: 500;
+}
 body {
   background-color: #f1f5f9;
+  font-family: 'ProximaNova';
 }
 .vertical-space {
   height: 20px;
@@ -12,8 +29,14 @@ body {
 .right-align {
   text-align: right;
 }
+.center-align {
+  text-align: center;
+}
 .top-margin {
   margin-top: 25px;
+}
+.top-margin-slight {
+  margin-top: 10px;
 }
 .full-width {
   width: 100%;
@@ -22,20 +45,42 @@ body {
   color: white;
   font-size: 30px;
 }
-.invalid-field-text{
+.invalid-field-text {
   color: red;
   font-size: 12px;
 }
-.action-button{
+.main-route-item-header {
+  font-weight: bold;
+  font-size: 21px;
+  margin: 35px 0px 18px 42px;
+}
+.action-button {
   border-radius: 20px;
-  background: #00c4ff;
+  background: #58d9d1;
   color: white;
   font-weight: 500;
 }
 .main-route-container .main-route-item {
   background-color: white;
   min-height: 150px;
-  margin: 35px 45px;
+  margin: 0 45px;
   border-radius: 1px;
   padding: 30px 60px;
+}
+sup {
+  top: -0.8em;
+  font-size: 53%;
+}
+.less-bold {
+  font-weight: 500;
+}
+.center-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bs-rating-star{
+  color: #58d9d1;
+  font-size: 18px;
 }
