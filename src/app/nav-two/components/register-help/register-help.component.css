@@ -1,0 +1,26 @@
+.register-info-container {
+  background-color: #22123a;
+  height: 100%;
+  box-sizing: var(--material-shadow);
+  border-radius: 5px;
+  color: white;
+  padding-top: 10px;
+  text-align: center;
+}
+.help-heading {
+  font-size: 24px;
+}
+.help-para {
+  margin: 20px 0 30px 0;
+  font-size: 13px;
+}
+.help-action {
+  margin-bottom: 20px;
+}
+.help-action button {
+  width: 45%;
+  border-radius: 20px;
+  background: #00c4ff;
+  color: white;
+  font-weight: 500;
+}

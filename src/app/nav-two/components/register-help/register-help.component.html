@@ -1,1 +1,27 @@
-<p>register-help works!</p>
+<div class="register-info-container">
+  <div class="help-heading">
+    Plase fill the form and click on register.
+  </div>
+  <div class="help-para">
+    Click on instructions func
+  </div>
+  <div class="help-action">
+    <button
+      *ngIf="rtr.url === '/navtwo/register'"
+      routerLink="navtwo/register-instructions"
+      (click)="rtr.navigate(['navtwo','register-instructions'])"
+      class="btn"
+    >
+      Instructions
+    </button>
+    <div class="help-action">
+      <button
+        *ngIf="rtr.url === '/navtwo/register-instructions'"
+        routerLink="navtwo/register"
+        class="btn"
+      >
+        Registration
+      </button>
+    </div>
+  </div>
+</div>

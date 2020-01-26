@@ -7,6 +7,7 @@ import { RouterModule } from "@angular/router";
 import { RegisterFormComponent } from "./components/register-form/register-form.component";
 import { RegisterHelpComponent } from "./components/register-help/register-help.component";
 import { RegisterConfirmationComponent } from "./components/register-confirmation/register-confirmation.component";
+import { RegisterInstructionsComponent } from './components/register-instructions/register-instructions.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RegisterConfirmationComponent } from "./components/register-confirmatio
     NavTwoMainComponent,
     RegisterFormComponent,
     RegisterHelpComponent,
-    RegisterConfirmationComponent
+    RegisterConfirmationComponent,
+    RegisterInstructionsComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,7 @@ import { RegisterConfirmationComponent } from "./components/register-confirmatio
         component: NavTwoMainComponent,
         children: [
           { path: "register", component: RegisterFormComponent },
-          { path: "register-help", component: RegisterHelpComponent },
+          { path: "register-instructions", component: RegisterInstructionsComponent },
           { path: "register-confirm", component: RegisterConfirmationComponent },
           { path: "**", redirectTo: "register", pathMatch: "full" }
         ]

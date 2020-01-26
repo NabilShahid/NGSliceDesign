@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterHelpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rtr:Router,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
   }
