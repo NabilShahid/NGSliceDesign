@@ -1,3 +1,4 @@
+import { DataAccessService } from "./../../../services/data-access.service";
 import { Router } from "@angular/router";
 import { ValidationService } from "./../../../services/validation.service";
 import { FormField } from "./../../../types/types";
@@ -11,7 +12,8 @@ import { Component, OnInit } from "@angular/core";
 export class RegisterFormComponent implements OnInit {
   constructor(
     private validationService: ValidationService,
-    private rtr: Router
+    private rtr: Router,
+    private dataAccessService: DataAccessService
   ) {}
   formTouched = false;
   formFields: {
@@ -23,7 +25,9 @@ export class RegisterFormComponent implements OnInit {
     Amount: { Valid: false, InvalidText: "Value cannot be blank" }
   };
 
-  formValues = {};
+  formValues: {
+    [key: string]: string;
+  } = {};
   validateName({ target: { name, value } }) {
     this.formValues[name] = value;
     this.formFields[name].Valid =
@@ -54,9 +58,10 @@ export class RegisterFormComponent implements OnInit {
     return Object.values(this.formFields).every(v => v.Valid);
   }
   goToConfirmation() {
-    this.formTouched=true;
+    this.formTouched = true;
     if (this.checkIfFormValid()) {
       this.rtr.navigate(["navtwo", "register-confirm"]);
+      this.dataAccessService.setCurrentData(this.formValues);
     }
   }
   ngOnInit() {}
