@@ -1,3 +1,4 @@
+import { CommunicationService } from "./../../services/communication.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { CONTAINER_TEXTS } from "./../../constants/common-consts";
 import { Component, OnInit } from "@angular/core";
@@ -8,7 +9,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./top-container.component.css"]
 })
 export class TopContainerComponent implements OnInit {
-  constructor() {}
+  constructor(private communicationService: CommunicationService) {}
   selectedHeadingText: string;
   textChanging: boolean = false;
   /**
@@ -22,5 +23,9 @@ export class TopContainerComponent implements OnInit {
       this.textChanging = false;
     }, 500);
   }
-  ngOnInit(){}
+  ngOnInit() {
+    this.communicationService.navlinkUpdatedFromChild.subscribe(navLink => {
+      this.updateSelectedHeadingTextWithAnimate(navLink);
+    });
+  }
 }

@@ -34,7 +34,9 @@ export class RegisterFormComponent implements OnInit {
 
   formValues: {
     [key: string]: string;
-  } = {}; //values store object
+  } = {
+    Amount: "$0"
+  }; //values store object
   validateName({ target: { name, value } }) {
     this.formValues[name] = value;
     this.formFields[name].Valid =

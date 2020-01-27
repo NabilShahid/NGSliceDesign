@@ -1,3 +1,5 @@
+import { CommunicationService } from './../../../services/communication.service';
+import { Router } from '@angular/router';
 import { DataAccessService } from "./../../../services/data-access.service";
 import { TableCol } from "./../../../types/types";
 import { Component, OnInit } from "@angular/core";
@@ -8,7 +10,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./nav-three-main.component.css"]
 })
 export class NavThreeMainComponent implements OnInit {
-  constructor(private dataAccessService: DataAccessService) {}
+  constructor(private dataAccessService: DataAccessService,private rtr:Router,private communicationService:CommunicationService) {}
   loading = true;
   currentData: Array<{
     [key: string]: string | number;
@@ -42,5 +44,9 @@ export class NavThreeMainComponent implements OnInit {
     this.loading=true;
     this.currentData = await this.dataAccessService.getRegistrationData();
     this.loading=false;
+  }
+  navigateToRegistration(){
+    this.communicationService.navlinkUpdatedFromChild.next("navtwo");
+    this.rtr.navigate(['navtwo']);
   }
 }

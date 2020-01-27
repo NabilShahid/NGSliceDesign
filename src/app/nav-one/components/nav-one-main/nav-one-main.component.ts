@@ -1,3 +1,5 @@
+import { CommunicationService } from './../../../services/communication.service';
+import { Router } from '@angular/router';
 import { TableCol } from './../../../types/types';
 import { CARD_BENEFITS, RATE_LIST } from "./../../../constants/common-consts";
 import { Component, OnInit, TemplateRef } from "@angular/core";
@@ -18,10 +20,14 @@ export class NavOneMainComponent implements OnInit {
    
   ];
   rateList=RATE_LIST;
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService,private rtr:Router,private communicationService:CommunicationService) {}
   cardBenefitsList = CARD_BENEFITS;
   ngOnInit() {}
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
+  }
+  navigateToRegistration(){
+    this.communicationService.navlinkUpdatedFromChild.next("navtwo");
+    this.rtr.navigate(['navtwo']);
   }
 }
