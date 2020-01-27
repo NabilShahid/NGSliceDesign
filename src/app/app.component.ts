@@ -10,7 +10,7 @@ import { slideInAnimation } from "./constants/animations";
 })
 export class AppComponent {
   title = "slicing-test-nabil";
-  prevPageIndex = 0;
+  prevPageIndex = 0; //for animation left or right based on difference between prev on new page index
   /**
    * Get outlet data index params, set direction param and return anim state with params
    * @param outlet router outlet object

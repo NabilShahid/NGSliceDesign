@@ -15,7 +15,7 @@ export class RegisterFormComponent implements OnInit {
     private rtr: Router,
     private dataAccessService: DataAccessService
   ) {}
-  formTouched = false;
+  formTouched = false;//fire validation flag
   formFields: {
     [key: string]: FormField;
   } = {
@@ -30,11 +30,11 @@ export class RegisterFormComponent implements OnInit {
         "Password must contain a special character, an upper case character, a lower case character and a numeric character"
     },
     Amount: { Valid: false, InvalidText: "Value cannot be blank" }
-  };
+  };//field options
 
   formValues: {
     [key: string]: string;
-  } = {};
+  } = {};//values store object
   validateName({ target: { name, value } }) {
     this.formValues[name] = value;
     this.formFields[name].Valid =
@@ -59,9 +59,16 @@ export class RegisterFormComponent implements OnInit {
       this.validationService.minLength(value, 1) &&
       this.validationService.maxLength(value, 100);
   }
+
+  /**
+   * checks valid value of all form options
+   */
   checkIfFormValid() {
     return Object.values(this.formFields).every(v => v.Valid);
   }
+  /**
+   * move data to serivce and navigate to confirmation page
+   */
   goToConfirmation() {
     this.formTouched = true;
     if (this.checkIfFormValid()) {

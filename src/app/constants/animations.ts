@@ -3,11 +3,11 @@ import {
   transition,
   style,
   query,
-  animateChild,
   group,
   animate
 } from "@angular/animations";
 
+//route change animation, slides in entering route markup
 export const slideInAnimation = trigger("routeAnimations", [
   transition(
     "* <=> *",
@@ -38,7 +38,6 @@ export const slideInAnimation = trigger("routeAnimations", [
         { optional: true }
       ),
       query(":enter", [style({ left: "{{start}}%" })], { optional: true }),
-      // query(":leave", animateChild(), { optional: true }),
       group([
         query(
           ":leave",
@@ -51,7 +50,6 @@ export const slideInAnimation = trigger("routeAnimations", [
           optional: true
         })
       ])
-      // query(":enter", animateChild(), { optional: true })
     ],
     { params: { start: "100", end: "-100" } }
   )

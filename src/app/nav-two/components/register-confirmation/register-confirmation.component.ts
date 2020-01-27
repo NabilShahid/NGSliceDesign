@@ -22,8 +22,12 @@ export class RegisterConfirmationComponent implements OnInit {
   ngOnInit() {
     if (this.dataAccessService.hasData())
       this.currentData = this.dataAccessService.getCurrentData();
-    else this.rtr.navigate(["navone"]);
+    else this.rtr.navigate(["navone"]);//if not data i.e. route opened directly
   }
+
+  /**
+   * save current data to data list
+   */
   async saveData() {
     this.loading=true;
     this.dataAccessService.updateDataValue(

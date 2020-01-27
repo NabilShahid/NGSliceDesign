@@ -7,7 +7,7 @@ import { REGISTER_INSTRUCTION } from '../../../constants/common-consts';
   styleUrls: ['./register-instructions.component.css']
 })
 export class RegisterInstructionsComponent implements OnInit {
-  registerInstructionsList=REGISTER_INSTRUCTION
+  registerInstructionsList=REGISTER_INSTRUCTION;
   constructor() { }
 
   ngOnInit() {

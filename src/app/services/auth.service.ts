@@ -6,8 +6,6 @@ import { Injectable } from "@angular/core";
 export class AuthService {
   constructor() {}
   public userIsAdmin(): boolean {
-    const token = localStorage.getItem("token");
-
     return false;
   }
 }

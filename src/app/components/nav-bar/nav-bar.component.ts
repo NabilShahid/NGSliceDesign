@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class NavBarComponent implements OnInit {
   constructor() {}
+  //emits when nav item click
   @Output() navIndexChange = new EventEmitter();
   readonly navLinks = [
     {
@@ -29,6 +30,9 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     this.emitCurrentRouteLinkIndex();
   }
+  /**
+   * emits initial route on load from location
+   */
   emitCurrentRouteLinkIndex() {
     this.navIndexChange.emit(
       this.navLinks.findIndex(

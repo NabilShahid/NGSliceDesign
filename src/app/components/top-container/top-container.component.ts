@@ -11,13 +11,16 @@ export class TopContainerComponent implements OnInit {
   constructor() {}
   selectedHeadingText: string;
   textChanging: boolean = false;
-  updateSelectedHeadingTextWithAnimate(index){
-    this.textChanging=true;
+  /**
+   * Fades heading, updates it and the shows for fade effect
+   * @param index of text to show from route
+   */
+  updateSelectedHeadingTextWithAnimate(index) {
+    this.textChanging = true;
     setTimeout(() => {
       this.selectedHeadingText = CONTAINER_TEXTS[index];
-      this.textChanging=false;
+      this.textChanging = false;
     }, 500);
-   
   }
   ngOnInit() {}
 }

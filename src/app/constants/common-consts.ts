@@ -1,9 +1,11 @@
+//text to show on top container of nav
 export const CONTAINER_TEXTS = [
   "Do the right thing",
   "Are you sure ",
   "That is a good idea"
 ];
 
+//shown and hidden for show more/show less implementation
 export const CARD_BENEFITS = [
   {
     Shown:
@@ -17,6 +19,8 @@ export const CARD_BENEFITS = [
   }
 ];
 
+
+//shown and hidden for show more/show less implementation
 export const REGISTER_INSTRUCTION = [
   {
     Shown:
@@ -30,6 +34,7 @@ export const REGISTER_INSTRUCTION = [
   }
 ];
 
+//initial data for showing in nav three table
 export const INITIAL_REGISTRATION_DATA = [
   {
     Name: "Nabil Shahid",

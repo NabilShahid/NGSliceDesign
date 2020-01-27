@@ -12,7 +12,7 @@ export class NavThreeMainComponent implements OnInit {
   loading = true;
   currentData: Array<{
     [key: string]: string | number;
-  }>=[];
+  }>=[];//data to pass in data list
   tableCols: Array<TableCol> = [
     { Label: "Name", GridSize: 3, DataKey: "Name", Align: "left" },
     { Label: "Email", GridSize: 3, DataKey: "Email", Align: "left" },
@@ -24,7 +24,7 @@ export class NavThreeMainComponent implements OnInit {
       FooterLabel: "Total",
       Align: "right"
     }
-  ];
+  ];//col options
 
   async ngOnInit() {
     this.loading = true;

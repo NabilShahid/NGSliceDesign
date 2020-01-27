@@ -11,11 +11,17 @@ export class DataListComponent implements OnInit {
   @Input() cols: Array<TableCol> = [];
   @Input() data: Array<any> = [];
   footerValues: { [key: string]: string }={};
+  /**
+   * calculate footers  on input change
+   */
   ngOnChanges(){
      this.calculateFooterValues();
   }
   ngOnInit() {
   }
+  /**
+   * footer values calculation based for cols footer key
+   */
   calculateFooterValues() {
     this.footerValues = this.cols.reduce((prev, curr) => {
       if (curr.Footer == "sum") {

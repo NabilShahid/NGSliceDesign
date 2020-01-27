@@ -8,11 +8,11 @@ export class DataAccessService {
   private hasCurrentData = false;
   private currentData: {
     [key: string]: string | number;
-  } = {};
+  } = {};//temp current data object
 
   private registrationData: Array<{
     [key: string]: string | number;
-  }> = INITIAL_REGISTRATION_DATA;
+  }> = INITIAL_REGISTRATION_DATA;//all resistration data storage
 
   getCurrentData() {
     return this.currentData;
@@ -34,6 +34,9 @@ export class DataAccessService {
     this.hasCurrentData = true;
   }
 
+  /**
+   * save current data obj to registration data array
+   */
   async submitData() {
     await this.fakeWait();
     this.registrationData.push(this.currentData);
@@ -52,6 +55,9 @@ export class DataAccessService {
     this.registrationData = [];
   }
 
+  /**
+   * resovle after delay for fake wait
+   */
   async fakeWait() {
     await new Promise(resolve => {
       setTimeout(() => {
