@@ -1,5 +1,5 @@
 .top-container {
-  height: 500px;
+  height: 75vh;
   background: #22123a;
   padding-top: 50px;
 }
@@ -15,4 +15,10 @@
 }
 .text-changing {
   opacity: 0;
+}
+@media (max-width: 992px) {
+  .top-container-heading {
+    font-size: 60px;
+    padding-left: 17px;
+  }
 }

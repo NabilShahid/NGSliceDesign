@@ -3,10 +3,10 @@
 </div>
 <div class="main-route-item">
   <div class="row">
-    <div class="col-md-8 less-bold">
+    <div class="col-md-8 nav-one-title">
       Barclaycard CashForward World MasterCard<sup>rm</sup>
     </div>
-    <div class="col-md-4 right-align">
+    <div class="col-md-4 right-align hide-on-small">
       <rating [(ngModel)]="rating" [max]="5"></rating>
       <span
         [innerHTML]="(reviewCount | thousandSep) + ' Reviews'"
@@ -17,15 +17,15 @@
   </div>
   <div class="row top-margin">
     <div class="col-md-4">
-      <div class="row">
-        <div class="col-sm-7">
+      <div class="row no-flex-wrap">
+        <div class="col-md-7">
           <img
             src="assets/images/bankcard.jpg"
             alt="Card Image"
             class="full-width"
           />
         </div>
-        <div class="col-sm-5 center-flex">
+        <div class="col-md-5 center-flex">
           <div>
             Approval Odds
           </div>
@@ -36,16 +36,19 @@
           </div>
         </div>
       </div>
-      <div>
-        <button class="btn apply-button" routerLink="/navtwo/register">
-          Apply Now
-        </button>
-      </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 wrap-margin">
       <app-ul-list [list]="cardBenefitsList"> </app-ul-list>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn apply-button" routerLink="/navtwo/register">
+        Apply Now
+      </button>
+    </div>
+  </div>
+
   <div class="more-details-section">
     <span class="clickable-text">
       See Details Rates & Fees

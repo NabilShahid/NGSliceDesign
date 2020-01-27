@@ -101,8 +101,26 @@ sup {
   color: #1796f5;
   cursor: pointer;
 }
+.no-flex-wrap{
+  flex-wrap: nowrap;
+}
 @media (max-width: 992px) {
-  .hide-on-small-device {
+  .hide-on-small {
     display: none;
+  }
+  .main-route-container .main-route-item {
+    background-color: white;
+    min-height: 150px;
+    margin: 0;
+    border-radius: 1px;
+    padding: 20px;
+  }
+  .main-route-item-header {
+    font-weight: bold;
+    font-size: 21px;
+    margin: 25px 0px 18px 20px;
+  }
+  .wrap-margin{
+    margin-top: 25px;
   }
 }

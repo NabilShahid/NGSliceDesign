@@ -13,12 +13,12 @@ export class TopContainerComponent implements OnInit {
   textChanging: boolean = false;
   /**
    * Fades heading, updates it and the shows for fade effect
-   * @param index of text to show from route
+   * @param navlink of text to show from route
    */
-  updateSelectedHeadingTextWithAnimate(index) {
+  updateSelectedHeadingTextWithAnimate(navlink) {
     this.textChanging = true;
     setTimeout(() => {
-      this.selectedHeadingText = CONTAINER_TEXTS[index];
+      this.selectedHeadingText = CONTAINER_TEXTS[navlink];
       this.textChanging = false;
     }, 500);
   }

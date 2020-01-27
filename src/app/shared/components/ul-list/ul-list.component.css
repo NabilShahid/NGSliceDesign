@@ -1,5 +1,5 @@
 li {
-  font-weight: 500;
+  font-size: 18px;
 }
 li:not(:first-child) {
   margin-top: 12px;

@@ -1,9 +1,4 @@
-//text to show on top container of nav
-export const CONTAINER_TEXTS = [
-  "Do the right thing",
-  "Are you sure ",
-  "That is a good idea"
-];
+
 
 //shown and hidden for show more/show less implementation
 export const CARD_BENEFITS = [
@@ -52,3 +47,12 @@ export const INITIAL_REGISTRATION_DATA = [
     Amount: 1230
   }
 ];
+
+
+//text to show on top container of nav
+export const CONTAINER_TEXTS = {
+  navone:"Do the right thing",
+  navtwo:"Invest on yourself",
+  navthree:"Better Future"
+}
+ 

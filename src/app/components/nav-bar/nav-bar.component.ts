@@ -34,11 +34,6 @@ export class NavBarComponent implements OnInit {
    * emits initial route on load from location
    */
   emitCurrentRouteLinkIndex() {
-    this.navIndexChange.emit(
-      this.navLinks.findIndex(
-        r => r.RoutePath === location.pathname.split("/")[1]
-      )
-    );
-    location.pathname.split("/")[1];
+    this.navIndexChange.emit(location.pathname.split("/")[1]);
   }
 }

@@ -1,15 +1,17 @@
-.apply-button{
-    width: 100%;
-    margin-top: 25px;
-    color: white;
-    background-color: #fb6e3d;
+.apply-button {
+  width: 100%;
+  color: white;
+  background-color: #fb6e3d;
 }
-.reviews-count{
-     font-size: 14px;
-    margin-left: 5px;
+.reviews-count {
+  font-size: 14px;
+  margin-left: 5px;
 }
-.more-details-section{
-    border-top: 1px solid #b9b9b9;
-    margin-top: 25px;
-    padding-top: 15px;
+.more-details-section {
+  border-top: 1px solid #b9b9b9;
+  margin-top: 25px;
+  padding-top: 15px;
+}
+.nav-one-title {
+  font-size: 24px;
 }

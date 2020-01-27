@@ -1,9 +1,26 @@
 <nav class="st-navbar">
   <a
-    *ngFor="let link of navLinks; let i = index"
     class="st-nav-link"
-    (click)="navIndexChange.emit(i)"
-    [routerLink]="'/' + link.RoutePath"
-    >{{ link.LargeText }}
+    (click)="navIndexChange.emit('navone')"
+   routerLink="/navone"
+    ><span class="hide-on-small">
+      Navigation 
+    </span>Link 1
+  </a>
+  <a
+    class="st-nav-link"
+    (click)="navIndexChange.emit('navtwo')"
+   routerLink="/navtwo"
+    ><span class="hide-on-small">
+      Navigation 
+    </span>Link 2
+  </a>
+  <a
+    class="st-nav-link"
+    (click)="navIndexChange.emit('navthree')"
+    routerLink="/navthree"
+    ><span class="hide-on-small">
+      Navigation 
+    </span>Link 3
   </a>
 </nav>
