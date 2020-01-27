@@ -1,10 +1,11 @@
 .register-info-container {
-  background-color: #efefef;
+  background-color: #ffffff;
   height: 210px;
   box-shadow: var(--material-shadow);
   border-radius: 5px;
   padding-top: 30px;
   text-align: center;
+  color: #3e3e3e;
 }
 .help-heading {
   font-size: 24px;

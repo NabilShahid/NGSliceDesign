@@ -3,13 +3,18 @@
     Plase fill the form and click on register.
   </div>
   <div class="help-para">
-    Click on instructions func
+    <span *ngIf="rtr.url === '/navtwo/register'">
+      Click on instruction to see form details.
+    </span>
+    <span *ngIf="rtr.url === '/navtwo/register-instructions'">
+      Click on registration to go back to registration form
+    </span>
   </div>
   <div class="help-action">
     <button
       *ngIf="rtr.url === '/navtwo/register'"
       routerLink="navtwo/register-instructions"
-      (click)="rtr.navigate(['navtwo','register-instructions'])"
+      (click)="rtr.navigate(['navtwo', 'register-instructions'])"
       class="btn action-button"
     >
       Instructions
