@@ -18,9 +18,9 @@ export class TopContainerComponent implements OnInit {
   updateSelectedHeadingTextWithAnimate(navlink) {
     this.textChanging = true;
     setTimeout(() => {
-      this.selectedHeadingText = CONTAINER_TEXTS[navlink];
+      this.selectedHeadingText = CONTAINER_TEXTS[navlink || "navone"];
       this.textChanging = false;
     }, 500);
   }
-  ngOnInit() {}
+  ngOnInit(){}
 }

@@ -1,1 +1,12 @@
-<p>not-authorized works!</p>
+<div class="main-route-item-header">
+  Not Authorized
+</div>
+<div class="main-route-item">
+  You are not authorized to view admin panel. If you are Admin, please click on
+  the below button.
+  <div class="top-margin">
+    <button (click)="confirmAdminAndNavigate()" class="btn action-button">
+      I Am Admin
+    </button>
+  </div>
+</div>

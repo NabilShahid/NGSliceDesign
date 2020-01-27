@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterHelpComponent implements OnInit {
 
-  constructor(private rtr:Router,private activatedRoute:ActivatedRoute) { }
+  constructor(public rtr:Router,public activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
   }

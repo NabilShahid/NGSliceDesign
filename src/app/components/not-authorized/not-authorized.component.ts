@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotAuthorizedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rtr:Router) { }
 
   ngOnInit() {
+  }
+  confirmAdminAndNavigate(){
+    localStorage.setItem("IsAdmin","yes");
+    this.rtr.navigate(['admin-panel']);
   }
 
 }

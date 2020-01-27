@@ -11,7 +11,7 @@ import { Component, OnInit } from "@angular/core";
 export class RegisterConfirmationComponent implements OnInit {
   currentData: {
     [key: string]: string | number;
-  };
+  }={};
   loading=false;
   constructor(
     private dataAccessService: DataAccessService,
