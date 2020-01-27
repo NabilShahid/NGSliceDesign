@@ -1,4 +1,4 @@
-<div class="row data-list-header">
+<div class="row data-list-header no-flex-wrap">
   <div
     *ngFor="let col of cols"
     class="col-sm-{{ col.GridSize }}"
@@ -7,7 +7,7 @@
     {{ col.Label }}
   </div>
 </div>
-<div *ngFor="let item of data" class="row data-list-row">
+<div *ngFor="let item of data" class="row data-list-row no-flex-wrap">
   <div
     *ngFor="let col of cols"
     class="col-sm-{{ col.GridSize }}"
@@ -16,7 +16,7 @@
     {{ item[col.DataKey] }}
   </div>
 </div>
-<div class="row data-list-footer">
+<div class="row data-list-footer no-flex-wrap">
   <div
     *ngFor="let col of cols"
     class="col-sm-{{ col.GridSize }}"

@@ -1,5 +1,7 @@
-import { CARD_BENEFITS } from "./../../../constants/common-consts";
-import { Component, OnInit } from "@angular/core";
+import { TableCol } from './../../../types/types';
+import { CARD_BENEFITS, RATE_LIST } from "./../../../constants/common-consts";
+import { Component, OnInit, TemplateRef } from "@angular/core";
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: "app-nav-one-main",
@@ -9,7 +11,17 @@ import { Component, OnInit } from "@angular/core";
 export class NavOneMainComponent implements OnInit {
   rating = 4; //rating start binding
   reviewCount = 3252; //review counting binding
-  constructor() {}
+  modalRef: BsModalRef;
+  tableCols: Array<TableCol> = [
+    { Label: "Item", GridSize: 6, DataKey: "Item", Align: "left" },
+    { Label: "Rate", GridSize: 6, DataKey: "Rate", Align: "left" }
+   
+  ];
+  rateList=RATE_LIST;
+  constructor(private modalService: BsModalService) {}
   cardBenefitsList = CARD_BENEFITS;
   ngOnInit() {}
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
 }

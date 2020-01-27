@@ -15,3 +15,6 @@
 .nav-one-title {
   font-size: 24px;
 }
+.modal-body{
+  padding: 15px 36px !important;
+}

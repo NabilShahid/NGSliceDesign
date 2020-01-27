@@ -6,6 +6,7 @@ import { NavOneMainComponent } from './components/nav-one-main/nav-one-main.comp
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { FormsModule } from '@angular/forms';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [NavOneMainComponent],
@@ -14,6 +15,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     SharedModule,
     RatingModule,
     FormsModule,
+    ModalModule.forRoot(),
     PaginationModule.forRoot(),
     RouterModule.forChild([
       {

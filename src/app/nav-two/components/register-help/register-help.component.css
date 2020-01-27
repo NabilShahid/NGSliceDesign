@@ -3,9 +3,10 @@
   height: 210px;
   box-shadow: var(--material-shadow);
   border-radius: 5px;
-  padding-top: 30px;
+  padding: 22px 17px;
   text-align: center;
   color: #3e3e3e;
+  margin-top: 10px;
 }
 .help-heading {
   font-size: 24px;

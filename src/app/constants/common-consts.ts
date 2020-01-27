@@ -55,4 +55,26 @@ export const CONTAINER_TEXTS = {
   navtwo:"Invest on yourself",
   navthree:"Better Future"
 }
- 
+
+export const RATE_LIST=[
+  {
+    Item:"Card 932",
+    Rate:"$5,000"
+  },
+  {
+    Item:"Card 234",
+    Rate:"$4,000"
+  },
+  {
+    Item:"Card 543",
+    Rate:"$1,400"
+  },
+  {
+    Item:"Card 432",
+    Rate:"$200"
+  },
+  {
+    Item:"Card 234",
+    Rate:"$960"
+  },
+]
